@@ -188,3 +188,110 @@ SNS 아이디
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>픽스엔터 복사툴</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #fff;
+      color: #111;
+      padding: 30px;
+      max-width: 720px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .ment-box {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+    textarea {
+      width: 100%;
+      height: 320px;
+      font-size: 15px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      resize: none;
+      background-color: #fff;
+      color: #000;
+    }
+    button {
+      margin-top: 12px;
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Fix Entertainment 로고" />
+    <h1>픽스엔터 크리에이터 복사툴</h1>
+  </header>
+
+  <div class="ment-box">
+    <h2>📋 수익 분배 기준 안내</h2>
+    <textarea id="shareText" readonly>저희는 장비는 기본으로 제공드리고 있으며,  
+스튜디오 제공 여부에 따라 수익 분배가 다르게 적용됩니다.
+
+✔️ 장비 제공 기준: 7:3 (크리에이터 7, 회사 3)  
+✔️ 장비 + 스튜디오 제공 시: 6:4 (크리에이터 6, 회사 4)
+
+추가로 방송 진행을 위한 교육과 지원도 함께 제공됩니다.
+
+- 1:1 방송 교육 (댄스, 콘셉트 기획, OBS 등)  
+- 디자인 지원 (프로필/시그니처 등)  
+- 콘텐츠 피드백 및 전담 디렉팅  
+- 기초 세무/법률 서포트
+
+장기 활동 시에는 분배율 조정도 가능하니  
+미팅 통해 자세히 설명드릴 수 있습니다!
+    </textarea>
+    <button onclick="copyToClipboard('shareText')">복사</button>
+  </div>
+
+  <footer>
+    Fix Entertainment © 2025 – 공식 크리에이터 지원용 툴
+  </footer>
+
+  <script>
+    function copyToClipboard(id) {
+      const textArea = document.getElementById(id);
+      textArea.select();
+      navigator.clipboard.writeText(textArea.value);
+      alert('복사되었습니다!');
+    }
+  </script>
+</body>
+</html>
