@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>픽스엔터 복사툴</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #fff;
+      color: #111;
+      padding: 30px;
+      max-width: 1080px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .ment-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .ment-box {
+      width: calc(50% - 10px);
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      font-size: 15px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      resize: none;
+      background-color: #fff;
+      color: #000;
+    }
+    button {
+      margin-top: 12px;
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+    }
+    @media (max-width: 640px) {
+      .ment-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Fix Entertainment 로고" />
+    <h1>픽스엔터 크리에이터 복사툴</h1>
+  </header>
+
+  <div class="ment-grid">
+    <div class="ment-box">
+      <h2>📩 인스타 DM 멘트</h2>
+      <textarea id="dmText" readonly>안녕하세요! 🎤
+저는 픽스엔터테인먼트 소속 캐스팅 실장 [본인이름]입니다
+회사소속 라이브 방송 크리에이터를 모집 중인데,
+딱 [닉네임]님 스타일이랑 너무 잘 맞을 것 같아서 연락드렸어요!
+관심 있으시면 간단히 설명드릴게요 🙌
+
+저희는 [닉네임]님만의 강점을 살릴 수 있도록,
+다음과 같은 맞춤형 지원을 제공합니다 🎥
+
+맞춤형 콘텐츠 기획
+방송 컨셉 설계
+1:1 춤 교육
+장비 교육
+전담 매니지먼트 시스템
+전문가용 방송 장비
+개인 방송 스튜디오 제공
+
+또한, 개인별 1:1 맞춤 지원도 가능합니다.
+
+혹시 수익이 불안정할까 걱정되신다면,
+저희는 안정적인 ‘시즌제 고정급’ 제도도 운영 중입니다.
+
+✔️ 3개월 단위 계약
+✔️ 주 5일, 하루 50만 원 기준 → 총 3,000만 원 지급
+✔️ 여기에 추가 인센티브도 별도 제공됩니다.
+
+방송을 처음 시작하셔도, 부담 없이 하나하나 함께 만들어갈 수 있어요.
+그리고 저희는 대중문화예술기획업 등록업체로서
+공식 등록된 업체이기 때문에, 계약이나 활동에 있어 안심하고 함께하실 수 있습니다. 🙌
+
+긴글 읽어주셔서 감사합니다. 혹여나 관심있으시다면
+DM으로 문의주시면 언제든지 답장드릴게요^^
+      </textarea>
+      <button onclick="copyToClipboard('dmText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>⭐️ 픽스엔터 프로필 요청폼</h2>
+      <textarea id="profileText" readonly>⭐️픽스엔터테인먼트 프로필⭐️
+
+이름- 
+키- 
+나이- 
+현재직업- 
+과거직업- 
+스튜디오 필요유무- 
+사는곳 - 
+방송경험 유무
+(방송을 하지않았으면 새롭게 도전하는이유)- 
+
+(방송을 그만두고 재도전하면 도전하는이유)- 
+
+SNS 아이디 
+인스타- 
+미팅가능 하신 날짜. 시간- 
+교통편-
+
+프로필 사진 3장도 기재해주세요 ^^
+      </textarea>
+      <button onclick="copyToClipboard('profileText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>🎯 틱톡 DM 멘트</h2>
+      <textarea id="tiktokText" readonly>안녕하세요. 픽스엔터테인먼트 캐스팅 담당자입니다.
+방송하시는 모습이 정말 인상 깊어 이렇게 연락드리게 되었습니다.
+현재 매일 고정 50만 원 + 인센티브 조건으로 게스트 제안을 드리고 있는데요,
+가볍게 이야기만 들어보셔도 괜찮으니 부담 없이 편하게 연락 주세요.
+      </textarea>
+      <button onclick="copyToClipboard('tiktokText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>📋 수익 분배 기준 안내</h2>
+      <textarea id="shareText" readonly>저희는 장비는 기본으로 제공드리고 있으며,  
+스튜디오 제공 여부에 따라 수익 분배가 다르게 적용됩니다.
+
+✔️ 장비 제공 기준: 7:3 (크리에이터 7, 회사 3)  
+✔️ 장비 + 스튜디오 제공 시: 6:4 (크리에이터 6, 회사 4)
+
+추가로 방송 진행을 위한 교육과 지원도 함께 제공됩니다.
+
+- 1:1 방송 교육 (댄스, 콘셉트 기획, OBS 등)  
+- 디자인 지원 (프로필/시그니처 등)  
+- 콘텐츠 피드백 및 전담 디렉팅  
+- 기초 세무/법률 서포트
+
+장기 활동 시에는 분배율 조정도 가능하니  
+미팅 통해 자세히 설명드릴 수 있습니다!
+      </textarea>
+      <button onclick="copyToClipboard('shareText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>🗓️ 미팅 안내 멘트</h2>
+      <textarea id="meetingGuideText" readonly>미팅 장소는 아래 두 곳 중 편하신 곳으로 선택하시면 됩니다 :)
+
+📍 경기 수원시 인계동 1015-1  
+→ 도착하시면 바로 연락 주세요. 건물 앞에서 맞이해 드릴게요.
+
+📍 서울 강남구 강남대로 492 HM타워  
+→ 1층 도착 후 연락 주시면 바로 내려가겠습니다!
+
+시간은 미리 조율해 주시면 최대한 맞춰드릴게요 🙌  
+편하신 장소와 날짜 알려주시면 일정 확정 도와드릴게요!
+      </textarea>
+      <button onclick="copyToClipboard('meetingGuideText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>✅ 미팅 확정 멘트</h2>
+      <textarea id="meetingConfirmText" readonly>미팅은 아래 일정으로 확정되었어요 🙂
+
+🗓️ 날짜: [날짜 입력]  
+⏰ 시간: [시간 입력]  
+📍 장소: [수원 인계동 or 강남 HM타워 중 택1]
+
+오시는 길 어려우시면 언제든지 연락 주세요.  
+1층 도착하시면 바로 맞이하겠습니다!
+      </textarea>
+      <button onclick="copyToClipboard('meetingConfirmText')">복사</button>
+    </div>
+  </div>
+
+  <footer>
+    Fix Entertainment © 2025 – 공식 크리에이터 지원용 툴
+  </footer>
+
+  <script>
+    function copyToClipboard(id) {
+      const textArea = document.getElementById(id);
+      textArea.select();
+      navigator.clipboard.writeText(textArea.value);
+      alert('복사되었습니다!');
+    }
+  </script>
+</body>
+</html>
