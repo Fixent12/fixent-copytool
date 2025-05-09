@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>픽스엔터 복사툴</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .ment-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 320px;
+      font-size: 15px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      resize: none;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>📢 픽스엔터 복사툴</h1>
+
+  <!-- 인스타 DM 멘트 -->
+  <div class="ment-box">
+    <h2>💬 인스타 DM 멘트</h2>
+    <textarea id="dmText" readonly>안녕하세요! 🎤
+저는 픽스엔터테인먼트 소속 캐스팅 실장 [본인이름]입니다
+회사소속 라이브 방송 크리에이터를 모집 중인데,
+딱 [닉네임]님 스타일이랑 너무 잘 맞을 것 같아서 연락드렸어요!
+관심 있으시면 간단히 설명드릴게요 🙌
+
+저희는 [닉네임]님만의 강점을 살릴 수 있도록,
+다음과 같은 맞춤형 지원을 제공합니다 🎥
+
+맞춤형 콘텐츠 기획
+방송 컨셉 설계
+1:1 춤 교육
+장비 교육
+전담 매니지먼트 시스템
+전문가용 방송 장비
+개인 방송 스튜디오 제공
+
+또한, 개인별 1:1 맞춤 지원도 가능합니다.
+
+혹시 수익이 불안정할까 걱정되신다면,
+저희는 안정적인 ‘시즌제 고정급’ 제도도 운영 중입니다.
+
+✔️ 3개월 단위 계약
+✔️ 주 5일, 하루 50만 원 기준 → 총 3,000만 원 지급
+✔️ 여기에 추가 인센티브도 별도 제공됩니다.
+
+방송을 처음 시작하셔도, 부담 없이 하나하나 함께 만들어갈 수 있어요.
+그리고 저희는 대중문화예술기획업 등록업체로서
+공식 등록된 업체이기 때문에, 계약이나 활동에 있어 안심하고 함께하실 수 있습니다. 🙌
+
+긴글 읽어주셔서 감사합니다. 혹여나 관심있으시다면
+DM으로 문의주시면 언제든지 답장드릴게요^^
+    </textarea>
+    <button onclick="copyToClipboard('dmText')">복사</button>
+  </div>
+
+  <!-- 프로필 폼 -->
+  <div class="ment-box">
+    <h2>⭐️ 픽스엔터 프로필 요청폼</h2>
+    <textarea id="profileText" readonly>⭐️픽스엔터테인먼트 프로필⭐️
+
+이름- 
+키- 
+나이- 
+현재직업- 
+과거직업- 
+스튜디오 필요유무- 
+사는곳 - 
+방송경험 유무
+(방송을 하지않았으면 새롭게 도전하는이유)- 
+
+(방송을 그만두고 재도전하면 도전하는이유)- 
+
+SNS 아이디 
+인스타- 
+미팅가능 하신 날짜. 시간- 
+교통편-
+
+프로필 사진 3장도 기재해주세요 ^^
+    </textarea>
+    <button onclick="copyToClipboard('profileText')">복사</button>
+  </div>
+
+  <!-- 틱톡 DM 멘트 -->
+  <div class="ment-box">
+    <h2>🌟 틱톡 DM 멘트</h2>
+    <textarea id="tiktokText" readonly>안녕하세요. 픽스엔터테인먼트 캐스팅 담당자입니다.
+방송하시는 모습이 정말 인상 깊어 이렇게 연락드리게 되었습니다.
+현재 매일 고정 50만 원 + 인센티브 조건으로 게스트 제안을 드리고 있는데요,
+가볍게 이야기만 들어보셔도 괜찮으니 부담 없이 편하게 연락 주세요.
+    </textarea>
+    <button onclick="copyToClipboard('tiktokText')">복사</button>
+  </div>
+
+  <script>
+    function copyToClipboard(id) {
+      const textArea = document.getElementById(id);
+      textArea.select();
+      navigator.clipboard.writeText(textArea.value);
+      alert('복사되었습니다!');
+    }
+  </script>
+</body>
+</html>
