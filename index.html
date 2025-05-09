@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>픽스엔터 복사툴</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #fff;
+      color: #111;
       padding: 30px;
-      background-color: #f9f9f9;
-      color: #333;
+      max-width: 720px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
     }
     h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 600;
     }
     .ment-box {
-      background-color: white;
+      background-color: #f7f7f7;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
     }
     textarea {
       width: 100%;
@@ -30,28 +40,38 @@
       border: 1px solid #ccc;
       border-radius: 10px;
       resize: none;
+      background-color: #fff;
+      color: #000;
     }
     button {
-      margin-top: 10px;
-      background-color: #4CAF50;
+      margin-top: 12px;
+      background-color: #000;
       color: white;
       border: none;
       padding: 12px 20px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 15px;
     }
     button:hover {
-      background-color: #45a049;
+      background-color: #333;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
-  <h1>📢 픽스엔터 복사툴</h1>
+  <header>
+    <img src="logo.jpg" alt="Fix Entertainment 로고" />
+    <h1>픽스엔터 크리에이터 복사툴</h1>
+  </header>
 
-  <!-- 인스타 DM 멘트 -->
   <div class="ment-box">
-    <h2>💬 인스타 DM 멘트</h2>
+    <h2>📩 인스타 DM 멘트</h2>
     <textarea id="dmText" readonly>안녕하세요! 🎤
 저는 픽스엔터테인먼트 소속 캐스팅 실장 [본인이름]입니다
 회사소속 라이브 방송 크리에이터를 모집 중인데,
@@ -88,7 +108,6 @@ DM으로 문의주시면 언제든지 답장드릴게요^^
     <button onclick="copyToClipboard('dmText')">복사</button>
   </div>
 
-  <!-- 프로필 폼 -->
   <div class="ment-box">
     <h2>⭐️ 픽스엔터 프로필 요청폼</h2>
     <textarea id="profileText" readonly>⭐️픽스엔터테인먼트 프로필⭐️
@@ -115,9 +134,8 @@ SNS 아이디
     <button onclick="copyToClipboard('profileText')">복사</button>
   </div>
 
-  <!-- 틱톡 DM 멘트 -->
   <div class="ment-box">
-    <h2>🌟 틱톡 DM 멘트</h2>
+    <h2>🎯 틱톡 DM 멘트</h2>
     <textarea id="tiktokText" readonly>안녕하세요. 픽스엔터테인먼트 캐스팅 담당자입니다.
 방송하시는 모습이 정말 인상 깊어 이렇게 연락드리게 되었습니다.
 현재 매일 고정 50만 원 + 인센티브 조건으로 게스트 제안을 드리고 있는데요,
@@ -125,6 +143,10 @@ SNS 아이디
     </textarea>
     <button onclick="copyToClipboard('tiktokText')">복사</button>
   </div>
+
+  <footer>
+    Fix Entertainment © 2025 – 공식 크리에이터 지원용 툴
+  </footer>
 
   <script>
     function copyToClipboard(id) {
