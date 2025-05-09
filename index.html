@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,7 +11,7 @@
       background-color: #fff;
       color: #111;
       padding: 30px;
-      max-width: 720px;
+      max-width: 1080px;
       margin: auto;
     }
     header {
@@ -25,16 +26,23 @@
       font-size: 22px;
       font-weight: 600;
     }
+    .ment-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
     .ment-box {
+      width: calc(50% - 10px);
       background-color: #f7f7f7;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 24px;
+      box-sizing: border-box;
     }
     textarea {
       width: 100%;
-      height: 320px;
+      height: 300px;
       font-size: 15px;
       padding: 15px;
       border: 1px solid #ccc;
@@ -52,6 +60,7 @@
       border-radius: 8px;
       cursor: pointer;
       font-size: 15px;
+      width: 100%;
     }
     button:hover {
       background-color: #333;
@@ -62,6 +71,11 @@
       color: #999;
       font-size: 13px;
     }
+    @media (max-width: 640px) {
+      .ment-box {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -70,9 +84,10 @@
     <h1>픽스엔터 크리에이터 복사툴</h1>
   </header>
 
-  <div class="ment-box">
-    <h2>📩 인스타 DM 멘트</h2>
-    <textarea id="dmText" readonly>안녕하세요! 🎤
+  <div class="ment-grid">
+    <div class="ment-box">
+      <h2>📩 인스타 DM 멘트</h2>
+      <textarea id="dmText" readonly>안녕하세요! 🎤
 저는 픽스엔터테인먼트 소속 캐스팅 실장 [본인이름]입니다
 회사소속 라이브 방송 크리에이터를 모집 중인데,
 딱 [닉네임]님 스타일이랑 너무 잘 맞을 것 같아서 연락드렸어요!
@@ -104,13 +119,13 @@
 
 긴글 읽어주셔서 감사합니다. 혹여나 관심있으시다면
 DM으로 문의주시면 언제든지 답장드릴게요^^
-    </textarea>
-    <button onclick="copyToClipboard('dmText')">복사</button>
-  </div>
+      </textarea>
+      <button onclick="copyToClipboard('dmText')">복사</button>
+    </div>
 
-  <div class="ment-box">
-    <h2>⭐️ 픽스엔터 프로필 요청폼</h2>
-    <textarea id="profileText" readonly>⭐️픽스엔터테인먼트 프로필⭐️
+    <div class="ment-box">
+      <h2>⭐️ 픽스엔터 프로필 요청폼</h2>
+      <textarea id="profileText" readonly>⭐️픽스엔터테인먼트 프로필⭐️
 
 이름- 
 키- 
@@ -130,22 +145,23 @@ SNS 아이디
 교통편-
 
 프로필 사진 3장도 기재해주세요 ^^
-    </textarea>
-    <button onclick="copyToClipboard('profileText')">복사</button>
-  </div>
+      </textarea>
+      <button onclick="copyToClipboard('profileText')">복사</button>
+    </div>
 
-  <div class="ment-box">
-    <h2>🎯 틱톡 DM 멘트</h2>
-    <textarea id="tiktokText" readonly>안녕하세요. 픽스엔터테인먼트 캐스팅 담당자입니다.
+    <div class="ment-box">
+      <h2>🎯 틱톡 DM 멘트</h2>
+      <textarea id="tiktokText" readonly>안녕하세요. 픽스엔터테인먼트 캐스팅 담당자입니다.
 방송하시는 모습이 정말 인상 깊어 이렇게 연락드리게 되었습니다.
 현재 매일 고정 50만 원 + 인센티브 조건으로 게스트 제안을 드리고 있는데요,
 가볍게 이야기만 들어보셔도 괜찮으니 부담 없이 편하게 연락 주세요.
-    </textarea>
-    <button onclick="copyToClipboard('tiktokText')">복사</button>
-  </div>
-<div class="ment-box">
-    <h2>📋 수익 분배 기준 안내</h2>
-    <textarea id="shareText" readonly>저희는 장비는 기본으로 제공드리고 있으며,  
+      </textarea>
+      <button onclick="copyToClipboard('tiktokText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>📋 수익 분배 기준 안내</h2>
+      <textarea id="shareText" readonly>저희는 장비는 기본으로 제공드리고 있으며,  
 스튜디오 제공 여부에 따라 수익 분배가 다르게 적용됩니다.
 
 ✔️ 장비 제공 기준: 7:3 (크리에이터 7, 회사 3)  
@@ -160,12 +176,13 @@ SNS 아이디
 
 장기 활동 시에는 분배율 조정도 가능하니  
 미팅 통해 자세히 설명드릴 수 있습니다!
-    </textarea>
-    <button onclick="copyToClipboard('shareText')">복사</button>
-  </div>
-  <div class="ment-box">
-    <h2>🗓️ 미팅 안내 멘트</h2>
-    <textarea id="meetingGuideText" readonly>미팅 장소는 아래 두 곳 중 편하신 곳으로 선택하시면 됩니다 :)
+      </textarea>
+      <button onclick="copyToClipboard('shareText')">복사</button>
+    </div>
+
+    <div class="ment-box">
+      <h2>🗓️ 미팅 안내 멘트</h2>
+      <textarea id="meetingGuideText" readonly>미팅 장소는 아래 두 곳 중 편하신 곳으로 선택하시면 됩니다 :)
 
 📍 경기 수원시 인계동 1015-1  
 → 도착하시면 바로 연락 주세요. 건물 앞에서 맞이해 드릴게요.
@@ -175,13 +192,13 @@ SNS 아이디
 
 시간은 미리 조율해 주시면 최대한 맞춰드릴게요 🙌  
 편하신 장소와 날짜 알려주시면 일정 확정 도와드릴게요!
-    </textarea>
-    <button onclick="copyToClipboard('meetingGuideText')">복사</button>
-  </div>
+      </textarea>
+      <button onclick="copyToClipboard('meetingGuideText')">복사</button>
+    </div>
 
-  <div class="ment-box">
-    <h2>✅ 미팅 확정 멘트</h2>
-    <textarea id="meetingConfirmText" readonly>미팅은 아래 일정으로 확정되었어요 🙂
+    <div class="ment-box">
+      <h2>✅ 미팅 확정 멘트</h2>
+      <textarea id="meetingConfirmText" readonly>미팅은 아래 일정으로 확정되었어요 🙂
 
 🗓️ 날짜: [날짜 입력]  
 ⏰ 시간: [시간 입력]  
@@ -189,9 +206,11 @@ SNS 아이디
 
 오시는 길 어려우시면 언제든지 연락 주세요.  
 1층 도착하시면 바로 맞이하겠습니다!
-    </textarea>
-    <button onclick="copyToClipboard('meetingConfirmText')">복사</button>
-  </div> 
+      </textarea>
+      <button onclick="copyToClipboard('meetingConfirmText')">복사</button>
+    </div>
+  </div>
+
   <footer>
     Fix Entertainment © 2025 – 공식 크리에이터 지원용 툴
   </footer>
@@ -205,4 +224,5 @@ SNS 아이디
     }
   </script>
 </body>
+</html>
 
